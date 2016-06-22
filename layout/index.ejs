@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <%- partial('_partial/header.ejs') %>
+
+        <section class="main">
+            <% page.posts.forEach(function(item, index) { %>
+                <%- partial('_partial/article-short', {item: item, index: index}) %>
+            <% }); %>
+        </section>
+    </div>
+</div>
+
+<%- partial('_partial/pagination') %>

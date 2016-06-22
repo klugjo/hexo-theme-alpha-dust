@@ -1,0 +1,19 @@
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            <% for (var i in theme.menu) { %>
+            <li class="menu-item">
+                <a href="<%- url_for(theme.menu[i]) %>">
+                    <%= i %>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>

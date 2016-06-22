@@ -1,0 +1,39 @@
+footer.footer-content
+  padding-top 100px
+  width 100%
+  min-height 350px
+  background $bgColor
+  color $mainColor1
+  border-top 1px dotted $mainColor1
+  text-align center
+  @media $xs
+    min-height 250px
+    padding-top 60px
+  a, a:link, a:visited, a:active
+    color $mainColor1
+    text-decoration none
+    cursor pointer
+  h2
+    font-family $fontTitle
+    padding-bottom 30px
+    font-size 1.5em
+  ul
+    list-style-type none
+    padding-left 0
+  .footer-about
+    text-align left
+  .footer-social-icons
+    margin 80px 0 50px 0
+    @media $xs
+      margin 30px 0 25px 0
+    li
+      padding 0 10px
+      line-height 3em
+      .footer-icon-container
+        i
+          font-size 2em
+      a, a:link, a:visited, a:active
+        border-bottom 0
+  .footer-copyright
+    margin 0 0 40px 0
+    font-size 0.7em

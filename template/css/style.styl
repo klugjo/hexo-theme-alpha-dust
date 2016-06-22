@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+linearGradient($top, $bottom)
+  background: $top
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom))
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%)
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%)
+
+$headerBgColor = #113a47
+$bgColor = #0f1516
+$mainColor1 = #d7ecff
+$greyTextColor = #a9b7c6
+$btnBgColor = #d7ecff
+$btnTextColor = #113a47
+$fontTitle = "Orbitron", sans-serif
+$titleTextShadow = 0 0 1px white, 0 0 5px white, 0 0 15px #228dff
+$titleTextShadowLight = 0 0 1px white, 0 0 3px white, 0 0 7px #228dff
+
+$xs = '(max-width: 33.9em)'
+$sm = '(max-width: 47.9em)'
+$md = '(max-width: 61.9em)'
+$lg = '(max-width: 74.9em)'
+
+body
+  background: $bgColor
+  font-family: 'Open Sans', sans-serif
+  @media $xs
+    font-size 0.7em
+
+.bg-gradient
+  linearGradient(lighten(#0f1516, 5%), lighten(#113a47, 20%))
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -2
+
+.bg-pattern
+  background: url("../img/bg-pattern.png") repeat
+  opacity: 0.5
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -1
+
+.bg-pattern-blue
+  background: url("../img/bg-pattern-blue.png") repeat
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -2
+
+a, a:link, a:visited, a:active
+  color: $mainColor1
+  border-bottom 1px dotted $mainColor1
+  cursor: pointer
+  transition: text-shadow 0.3s ease, border-bottom-color 0.5s ease
+  text-decoration none
+a:hover
+  color $mainColor1
+  text-shadow $titleTextShadowLight
+  border-bottom 1px dotted transparent
+  text-decoration none
+
+.btn
+  color: $btnTextColor
+  text-decoration: none
+  font-family: $fontTitle
+  background: $btnBgColor
+  &:hover
+    background: darken($btnBgColor, 8%)
+    transition: all 0.3s ease
+  &:active
+    background: darken($btnBgColor, 25%)
+
+header
+  height: 300px
+  padding-top: 100px
+  .logo
+    margin: 0 auto
+    text-align: center
+    .logo-icon
+      font-size: 60px
+      color: $mainColor1
+      text-shadow: $titleTextShadow
+    img
+      width: 100px
+      height: 100px
+      border-radius: 50%
+    .title
+      line-height: 100px
+      color: $mainColor1
+      font-family: $fontTitle
+      text-shadow: $titleTextShadow
+      cursor: pointer
+
+
+section.main
+  color: $mainColor1
+  .post
+    margin-top: 120px
+    @media $xs
+      margin-top 60px
+    .post-header
+      position relative
+      width 100%
+      margin 0 10px
+      &:before
+        position absolute
+        padding 5px
+        top -10px
+        bottom -10px
+        left -5px
+        content "  "
+        border-left 1px solid $mainColor1
+        border-bottom 1px solid $mainColor1
+        border-top 1px solid $mainColor1
+        transition: left 0.3s ease
+        @media $xs
+          display none
+      &:after
+        position absolute
+        content "  "
+        padding 5px
+        top -10px
+        bottom -10px
+        right -5px
+        border-right 1px solid $mainColor1
+        border-bottom 1px solid $mainColor1
+        border-top 1px solid $mainColor1
+        transition: right 0.3s ease
+        @media $xs
+          display none
+      h1.title
+        text-align: center
+        font-family: $fontTitle
+        text-shadow: $titleTextShadow
+        cursor pointer
+        @media $xs
+          font-size 2.5em
+      .post-info
+        margin-top: 15px
+        text-align: center
+        text-transform: uppercase
+        font-family: $fontTitle
+        span
+          padding: 10px
+      &.hover
+        &:before
+          left 5px
+        &:after
+          right 5px
+    .content
+      margin-top: 65px
+      @media $xs
+        margin-top 40px
+      text-align justify
+      h1, h2, h3, h4, h5, h6
+        color: $mainColor1
+        font-family: $fontTitle
+      h1, h2
+        text-shadow: $titleTextShadow
+      h1
+        width 100%
+        padding-bottom 10px
+        margin 45px 0 30px 0
+        border-bottom 1px solid $mainColor1
+      h2
+        margin 30px 0 15px 0
+      h3
+        margin 30px 0 15px 0
+        text-shadow $titleTextShadowLight
+      hr
+        border-color $mainColor1
+      b
+        font-weight 900
+      table
+        margin 0 0 3em 0
+        width 100%
+        tbody
+          tr
+            border solid 1px $mainColor1
+            border-left 0
+            border-right 0
+            &:nth-child(2n + 1)
+              background rgba(144, 144, 144, 0.075)
+        td
+          padding 0.75em 0.75em
+        th
+          font-weight 900
+          padding 0 0.75em 0.75em 0.75em
+          text-align left
+        thead
+          border-bottom solid 2px $mainColor1
+        tfoot
+          border-top solid 2px $mainColor1
+
+      blockquote
+        background rgba(144, 144, 144, 0.1)
+        border-left: 10px solid $greyTextColor
+        margin: 2em 10px
+        padding: 1em 15px
+        p
+          display: inline
+        footer
+          text-align right
+          padding 25px 10px 10px 10px
+          font-family $fontTitle
+          overflow auto
+          strong
+            &:before
+              content "-"
+              padding-right 10px
+          cite
+            padding 10px
+      .pullquote
+        float: right;
+        border: none;
+        padding: 0;
+        margin: 1em 0 1em 1.5em;
+        text-align: left;
+        width: 45%;
+        background none
+        font-size 2em
+        font-style italic
+        &.left
+          float left
+
+      .video-container
+        position relative
+        padding-top 56.25%
+        height 0
+        overflow hidden
+        iframe, object, embed
+          position absolute
+          top 0
+          left 0
+          width 100%
+          height 100%
+          margin-top 0
+
+    .read-more
+      margin: 10px auto
+      font-family $fontTitle
+      text-transform uppercase
+
+.push
+  height: 150px
+  @media $xs
+    height 60px
+
+.menu-bg
+  background: #000
+  display none
+  opacity: 0
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: 100
+  .menu-container
+    position: fixed
+    padding 0 250px
+    border-left 1px solid $mainColor1
+    border-right 1px solid $mainColor1
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ul
+      list-style-type none
+      margin-bottom 0
+      li
+        text-align right
+        padding 5px
+        a
+          font-family $fontTitle
+          text-transform uppercase
+          font-size 30px
+          border-bottom none
+
+nav
+  position fixed
+  right 2em
+  top 1.5em
+  z-index 10000
+  a, a:link, a:visited, a:active
+    font-family FontAwesome
+    font-style normal
+    border-bottom none
+    font-size 2em
+    opacity: 0.5
+    transition: opacity 0.3s ease
+    &:before
+      content "\f0c9"
+    &.menu-active
+      &:before
+        content "\f00d"
+  a:hover
+    opacity 1
+
+.wrap-pagination
+  margin-top 50px
+  font-size 30px
+  text-align center
+  color $mainColor1
+  a
+    border-bottom 0
+    margin 30px
+
+footer.footer-content
+  padding-top 100px
+  width 100%
+  min-height 350px
+  @media $xs
+    min-height 250px
+    padding-top 60px
+  background $bgColor
+  color $mainColor1
+  border-top 1px dotted $mainColor1
+  text-align center
+  a, a:link, a:visited, a:active
+    color $mainColor1
+    text-decoration none
+    cursor pointer
+  h2
+    font-family $fontTitle
+    padding-bottom 30px
+    font-size 1.5em
+  ul
+    list-style-type none
+    padding-left 0
+  .footer-about
+    text-align left
+  .footer-social-icons
+    margin 80px 0 50px 0
+    @media $xs
+      margin 30px 0 25px 0
+    li
+      padding 0 10px
+      line-height 3em
+      .footer-icon-container
+        i
+          font-size 2em
+      a, a:link, a:visited, a:active
+        border-bottom 0
+  .footer-copyright
+    margin 0 0 40px 0
+    font-size 0.7em
+
+code
+  color $greyTextColor
+  background rgba(144, 144, 144, 0.1)
+
+figure.highlight
+  font-family monospace
+  color $greyTextColor
+  border-top 1px solid $mainColor1
+  background rgba(144, 144, 144, 0.1)
+  overflow-y auto
+  margin 1.5em 0
+  figcaption
+    padding-top 10px
+    &:before
+      content "\f016"
+      font-family FontAwesome
+      margin 0 20px 0 50px
+    a
+      margin-left 10px
+  table
+    margin 0 !important
+    tbody
+      tr
+        border-top 0 !important
+        background none !important
+        td
+          &.gutter
+            width 40px
+            text-align right
+          padding 8px !important
+          overflow-x scroll !important
+          pre
+            overflow-x scroll !important
+            margin-bottom 0
+            color $greyTextColor
+            // Theme: Solarized - Light
+            // More theme here: http://softwaremaniacs.org/media/soft/highlight/test.html
+            .comment
+            .template_comment
+            .diff .header
+            .doctype
+            .pi
+            .lisp .string
+            .javadoc
+              color #808080
+              font-style italic
+
+            .keyword
+            .winutils
+            .method
+            .addition
+            .css .tag
+            .request
+            .status
+            .nginx .title
+              color #cc7832
+
+            .number
+            .command
+            .tag .value
+            .phpdoc
+            .tex .formula
+            .regexp
+            .hexcolor
+              color #6897BB
+
+            .string
+              color #6A8759
+
+            .title
+            .localvars
+            .chunk
+            .decorator
+            .built_in
+            .identifier
+            .vhdl
+            .literal
+            .id
+              color #268bd2
+
+            .attribute
+            .variable
+            .lisp .body
+            .smalltalk .number
+            .constant
+            .class .title
+            .parent
+            .haskell .type
+              color #6A8759
+
+            .preprocessor
+            .preprocessor .keyword
+            .shebang
+            .symbol
+            .symbol .string
+            .diff .change
+            .special
+            .attr_selector
+            .important
+            .subst
+            .cdata
+            .clojure .title
+              color #e8bf6a
+
+            .deletion
+              color #dc322f

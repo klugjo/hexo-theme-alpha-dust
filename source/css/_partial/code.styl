@@ -1,0 +1,106 @@
+code
+  color $greyTextColor
+  background rgba(144, 144, 144, 0.1)
+
+figure.highlight
+  font-family monospace
+  color $greyTextColor
+  border-top 1px solid $mainColor1
+  background rgba(144, 144, 144, 0.1)
+  overflow-y auto
+  margin 1.5em 0
+  figcaption
+    padding-top 10px
+    &:before
+      content "\f016"
+      font-family FontAwesome
+      margin 0 20px 0 50px
+    a
+      margin-left 10px
+  table
+    margin 0 !important
+    tbody
+      tr
+        border-top 0 !important
+        background none !important
+        td
+          &.gutter
+            width 40px
+            text-align right
+          padding 8px !important
+          overflow-x scroll !important
+          pre
+            overflow-x scroll !important
+            margin-bottom 0
+            color $greyTextColor
+            // Theme: Solarized - Light
+            // More theme here: http://softwaremaniacs.org/media/soft/highlight/test.html
+            .comment
+            .template_comment
+            .diff .header
+            .doctype
+            .pi
+            .lisp .string
+            .javadoc
+              color #808080
+              font-style italic
+
+            .keyword
+            .winutils
+            .method
+            .addition
+            .css .tag
+            .request
+            .status
+            .nginx .title
+              color #cc7832
+
+            .number
+            .command
+            .tag .value
+            .phpdoc
+            .tex .formula
+            .regexp
+            .hexcolor
+              color #6897BB
+
+            .string
+              color #6A8759
+
+            .title
+            .localvars
+            .chunk
+            .decorator
+            .built_in
+            .identifier
+            .vhdl
+            .literal
+            .id
+              color #268bd2
+
+            .attribute
+            .variable
+            .lisp .body
+            .smalltalk .number
+            .constant
+            .class .title
+            .parent
+            .haskell .type
+              color #6A8759
+
+            .preprocessor
+            .preprocessor .keyword
+            .shebang
+            .symbol
+            .symbol .string
+            .diff .change
+            .special
+            .attr_selector
+            .important
+            .subst
+            .cdata
+            .clojure .title
+              color #e8bf6a
+
+            .deletion
+              color #dc322f

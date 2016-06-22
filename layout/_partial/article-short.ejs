@@ -1,0 +1,33 @@
+
+<div class="post">
+
+    <div class="post-header index">
+        <h1 class="title">
+            <a href="<%- url_for(item.path) %>">
+                <%- item.title || theme.default_post_title || __('default_post_title') %>
+            </a>
+        </h1>
+        <div class="post-info">
+            <span class="date"><%= item.date.format(config.date_format) %></span>
+            <span class="comments">3 Comments</span>
+            <% console.log(item.categories) %>
+            <% if(item.categories.first()) { %>
+                <span class="category">
+                    <a href="<%- config.root + item.categories.first().path  %>"><%- item.categories.first().name %></a>
+                </span>
+            <% } %>
+        </div>
+    </div>
+
+    <% if(item.excerpt) { %>
+        <div class="content">
+            <%- item.excerpt %>
+        </div>
+        <a href="<%- url_for(item.path) %>" class="read-more">Read More</a>
+    <% } else { %>
+        <div class="content">
+            <%- item.content %>
+        </div>
+    <% } %>
+
+</div>

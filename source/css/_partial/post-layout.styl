@@ -1,0 +1,66 @@
+section.main
+  color: $mainColor1
+  .post
+    margin-top: 120px
+    @media $xs
+      margin-top 60px
+    .post-header
+      position relative
+      width 100%
+      margin 0 10px
+      &:before
+        position absolute
+        padding 5px
+        top -10px
+        bottom -10px
+        left -5px
+        content "  "
+        border-left 1px solid $mainColor1
+        border-bottom 1px solid $mainColor1
+        border-top 1px solid $mainColor1
+        transition: left 0.3s ease
+        @media $xs
+          display none
+      &:after
+        position absolute
+        content "  "
+        padding 5px
+        top -10px
+        bottom -10px
+        right -5px
+        border-right 1px solid $mainColor1
+        border-bottom 1px solid $mainColor1
+        border-top 1px solid $mainColor1
+        transition: right 0.3s ease
+        @media $xs
+          display none
+      h1.title
+        text-align: center
+        font-family: $fontTitle
+        text-shadow: $titleTextShadow
+        cursor pointer
+        a, a:link, a:visited, a:active
+          border-bottom none
+        @media $xs
+           font-size 2.5em
+      .post-info
+        margin-top: 15px
+        text-align: center
+        text-transform: uppercase
+        font-family: $fontTitle
+        span
+          padding: 10px
+      &.hover
+        &:before
+          left 5px
+        &:after
+          right 5px
+    .content
+      margin-top: 65px
+      @media $xs
+        margin-top 40px
+        text-align justify
+    .read-more
+      margin: 10px auto
+      font-family $fontTitle
+      text-transform uppercase

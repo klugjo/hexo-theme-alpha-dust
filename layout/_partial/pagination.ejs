@@ -1,0 +1,15 @@
+
+<% if(page.prev || page.next) { %>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrap-pagination">
+                <a class="<%- page.prev ? "" : "disabled" %>" href="<%- config.root %><%- page.prev_link %>">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a class="<%- page.next ? "" : "disabled" %>" href="<%- config.root %><%- page.next_link %>">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+<% } %>

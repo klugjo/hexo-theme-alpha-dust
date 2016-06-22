@@ -1,0 +1,135 @@
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2><%- __('about') %></h2>
+                <p>
+                    <%- theme.footer_about %>
+                </p>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+                <h2><%- __('recent_posts') %></h2>
+                <ul>
+                    <li><a class="footer-post">Lorem ipsum</a></li>
+                    <li><a class="footer-post">ullam dolor</a></li>
+                    <li><a class="footer-post">sit consectetur</a></li>
+                    <li><a class="footer-post">totam voluptate</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+                <h2><%- __('categories') %></h2>
+                <ul>
+                    <li><a class="footer-category">Development</a></li>
+                    <li><a class="footer-category">Showcase</a></li>
+                    <li><a class="footer-category">Tutorial</a></li>
+                    <li><a class="footer-category">JavaScript</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    <% if(theme.github_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.github_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.twitter_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.twitter_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.facebook_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.facebook_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.instagram_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.instagram_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.dribble_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.dribble_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.googleplus_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.googleplus_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.behance_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.behance_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.fivehundredpx_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.fivehundredpx_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.email_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.email_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if(theme.rss_url) { %>
+                    <li class="list-inline-item">
+                        <a href="<%- theme.rss_url %>">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    <%- theme.footer_copyright %>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

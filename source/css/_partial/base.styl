@@ -1,0 +1,48 @@
+body
+  background: $bgColor
+  font-family: 'Open Sans', sans-serif
+  @media $xs
+    font-size 0.7em
+
+.bg-gradient
+  linearGradient(lighten(#0f1516, 5%), lighten(#113a47, 20%))
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -2
+
+.bg-pattern
+  background: url("../img/bg-pattern.png") repeat
+  opacity: 0.5
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -1
+
+a, a:link, a:visited, a:active
+  color: $mainColor1
+  border-bottom 1px dotted $mainColor1
+  cursor: pointer
+  transition: text-shadow 0.3s ease, border-bottom-color 0.5s ease
+  text-decoration none
+a:hover
+  color $mainColor1
+  text-shadow $titleTextShadowLight
+  border-bottom 1px dotted transparent
+  text-decoration none
+
+.btn
+  color: $btnTextColor
+  text-decoration: none
+  font-family: $fontTitle
+  background: $btnBgColor
+  &:hover
+    background: darken($btnBgColor, 8%)
+    transition: all 0.3s ease
+  &:active
+    background: darken($btnBgColor, 25%)
+
+.push
+  height: 150px
+  @media $xs
+    height 60px
