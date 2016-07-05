@@ -1,0 +1,12 @@
+<% if (site.categories.length){ %>
+<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
+    <h2><%- __('categories') %></h2>
+    <ul>
+        <% site.categories.sort('posts.length').limit(4).each(function(cat){ %>
+        <li>
+            <a class="footer-post" href="<%- url_for(cat.path) %>"><%= cat.name.substring(0, 25) %></a>
+        </li>
+        <% }) %>
+    </ul>
+</div>
+<% } %>

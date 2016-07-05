@@ -1,0 +1,13 @@
+<% if (site.posts.length){ %>
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2><%- __('recent_posts') %></h2>
+        <ul>
+            <% site.posts.sort('date', -1).limit(4).each(function(post){ %>
+            <li>
+                <a class="footer-post" href="<%- url_for(post.path) %>"><%= (post.title || theme.default_post_title || __('default_post_title')).substring(0, 25) %></a>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+<% } %>
+

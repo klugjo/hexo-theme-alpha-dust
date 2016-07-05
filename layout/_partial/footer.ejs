@@ -9,24 +9,8 @@
                     <%- theme.footer_about %>
                 </p>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
-                <h2><%- __('recent_posts') %></h2>
-                <ul>
-                    <li><a class="footer-post">Lorem ipsum</a></li>
-                    <li><a class="footer-post">ullam dolor</a></li>
-                    <li><a class="footer-post">sit consectetur</a></li>
-                    <li><a class="footer-post">totam voluptate</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 footer-categories">
-                <h2><%- __('categories') %></h2>
-                <ul>
-                    <li><a class="footer-category">Development</a></li>
-                    <li><a class="footer-category">Showcase</a></li>
-                    <li><a class="footer-category">Tutorial</a></li>
-                    <li><a class="footer-category">JavaScript</a></li>
-                </ul>
-            </div>
+            <%- partial('footer_recent_posts') %>
+            <%- partial('footer_categories') %>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
