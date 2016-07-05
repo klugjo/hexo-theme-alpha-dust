@@ -2,7 +2,7 @@
     <div class="col-sm-12">
 
         <!--Title and Logo-->
-        <%- partial('_partial/header.ejs') %>
+        <%- partial('_partial/header.ejs', {logoIcon: '', headerTitle: config.title}) %>
 
         <section class="main">
             <% page.posts.forEach(function(item, index) { %>

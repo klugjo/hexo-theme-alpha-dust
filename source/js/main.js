@@ -22,9 +22,9 @@ var alphaDust = function () {
         $('nav a').addClass('menu-active');
         $('.menu-bg').show();
         $('.menu-item').css({opacity: 0});
-        TweenLite.to(".menu-container", 1, {padding: '0 40px'});
-        TweenLite.to(".menu-bg", 1, {opacity: '0.92'});
-        TweenMax.staggerTo(".menu-item", 0.5, {opacity: 1}, 0.3);
+        TweenLite.to('.menu-container', 1, {padding: '0 40px'});
+        TweenLite.to('.menu-bg', 1, {opacity: '0.92'});
+        TweenMax.staggerTo('.menu-item', 0.5, {opacity: 1}, 0.3);
         _menuOn = true;
 
         $('.menu-bg').hover(function () {
@@ -34,10 +34,10 @@ var alphaDust = function () {
 
     function _menuHide() {
         $('nav a').removeClass('menu-active');
-        TweenLite.to(".menu-bg", 0.5, {opacity: '0', onComplete: function () {
+        TweenLite.to('.menu-bg', 0.5, {opacity: '0', onComplete: function () {
             $('.menu-bg').hide();
         }});
-        TweenLite.to(".menu-container", 0.5, {padding: '0 100px'});
+        TweenLite.to('.menu-container', 0.5, {padding: '0 100px'});
         $('.menu-item').css({opacity: 0});
         _menuOn = false;
     }
@@ -59,9 +59,15 @@ var alphaDust = function () {
         });
     }
 
+    function displayArchives() {
+        $('.archive-post').css({opacity: 0});
+        TweenMax.staggerTo('.archive-post', 0.4, {opacity: 1}, 0.15);
+    }
+
     return {
         initPostHeader: initPostHeader,
-        initMenu: initMenu
+        initMenu: initMenu,
+        displayArchives: displayArchives
     };
 }();
 
@@ -69,4 +75,5 @@ var alphaDust = function () {
 $(document).ready(function () {
     alphaDust.initPostHeader();
     alphaDust.initMenu();
+    alphaDust.displayArchives();
 });

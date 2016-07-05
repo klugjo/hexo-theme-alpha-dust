@@ -7,3 +7,5 @@ about: About
 recent_posts: "Recent Posts"
 categories: "Categories"
 default_post_title: "Untitled"
+category: Category
+tag: Tag

@@ -1,7 +1,7 @@
 section.main
   color: $mainColor1
   .post
-    margin-top: 120px
+    margin-top: 200px
     @media $xs
       margin-top 60px
     .post-header
@@ -60,7 +60,49 @@ section.main
       @media $xs
         margin-top 40px
         text-align justify
+      .gallery-container
+        width 100%
+        display block
+        &:after
+          content " "
+          visibility hidden
+          display block
+          height 50px
+          clear both
+        .picture-container
+          width 25%
+          float left
+          min-width 200px
+          a
+            border none
+            .img-thumbnail
+              border none
+              background transparent
+              padding-right 20px
+              width 100%
     .read-more
       margin: 10px auto
       font-family $fontTitle
       text-transform uppercase
+    .comments
+      margin-top 120px
+      @media $xs
+         margin-top 60px
+   .post-tags
+     margin-top 60px
+     text-transform: uppercase
+     font-family: $fontTitle
+     a, i
+       margin-right 15px
+
+.featherlight
+  .featherlight-content
+    background transparent
+    .featherlight-close
+      color $mainColor1
+      cursor pointer
+      transition text-shadow 0.3s ease
+      text-decoration none
+      background transparent
+      &:hover
+        text-shadow $titleTextShadowLight

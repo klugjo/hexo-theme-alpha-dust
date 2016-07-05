@@ -1,0 +1,25 @@
+.archive-container
+  margin-top 50px
+  @media $xs
+    margin-top 0
+  .archive-post
+    margin 10px 0
+    font-size 1.2em
+    border-left 10px solid transparent
+    background rgba(144, 144, 144, 0.1)
+    transition border-left 0.3s ease, background 0.3s ease
+    .archive-date
+      margin-right 40px
+    a, a:link, a:visited, a:active
+      padding 10px 10px 10px 40px
+      display block
+      border-bottom none
+      width 100%
+    a:hover
+      padding 10px 10px 10px 40px
+      display block
+      width 100%
+      text-shadow none
+    &:hover
+      background rgba(144, 144, 144, 0.2)
+      border-left 10px solid $mainColor1

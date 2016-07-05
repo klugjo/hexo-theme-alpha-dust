@@ -1,0 +1,56 @@
+
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="<%- url_for(item.path) %>">
+                <%- item.title || theme.default_post_title || __('default_post_title') %>
+            </a>
+        </h1>
+        <div class="post-info">
+            <span class="date"><%= item.date.format(config.date_format) %></span>
+            <a href="#disqus_thread" class="comments"><%= __('comment') %></a>
+            <% console.log(item.categories) %>
+            <% if(item.categories && item.categories.first()) { %>
+                <span class="category">
+                    <a href="<%- config.root + item.categories.first().path  %>"><%- item.categories.first().name %></a>
+                </span>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        <% if (item.photos && item.photos.length){ %>
+            <%- partial('gallery') %>
+        <% } %>
+
+        <!-- Post Content -->
+        <%- item.content %>
+    </div>
+
+    <%
+        var tags = [];
+        if(item.tags && item.tags.length) {
+            item.tags.forEach(function(tag){
+                tags.push('<a href="' + config.root + tag.path + '">#' + tag.name + '</a>');
+            });
+        }
+    %>
+
+    <% if(tags.length) { %>
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <%- tags.join(' ') %>
+        </div>
+    <% } %>
+
+    <!-- Comments -->
+    <% if (item.comment != false) { %>
+    <div class="comments">
+        <%- partial("_partial/comments.ejs") %>
+    </div>
+    <% } %>
+
+</div>

@@ -1,0 +1,41 @@
+<%
+    var title = '';
+    if (page.archive) {
+        if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+        else title = __('archive_a');
+    }
+
+    var postList = [];
+    if (page.category) {
+        site.categories.forEach(function(item) {
+            if(item.name === page.category) {
+                postList = item.posts.slice();
+            }
+        });
+        title = page.category;
+    }
+    else if (page.tag) {
+        site.tags.forEach(function(item) {
+            if(item.name === page.tag) {
+                postList = item.posts;
+            }
+        });
+        title = "#" + page.tag;
+    } else {
+        postList = site.posts;
+    }
+%>
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <%- partial('_partial/header.ejs', {logoIcon: '', headerTitle: title}) %>
+
+        <section class="main archive-container">
+            <% postList.each(function(item){ %>
+                <%- partial('_partial/article-archive', {item: item}) %>
+            <% }); %>
+        </section>
+    </div>
+</div>

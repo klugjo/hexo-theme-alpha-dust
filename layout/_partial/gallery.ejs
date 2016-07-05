@@ -1,0 +1,12 @@
+
+<div class="gallery-container">
+    <% if (item.photos.length){ %>
+        <% item.photos.forEach(function(photo){ %>
+            <div class="picture-container">
+                <a href="#" data-featherlight="<%- config.root %><%- photo %>">
+                    <img src="<%- config.root %><%- photo %>" class="img-thumbnail" />
+                </a>
+            </div>
+        <% }); %>
+    <% } %>
+</div>

@@ -1,9 +1,12 @@
+# Logo (Font Awesome Class)
+fa_logo: fa-cube
+
 # Header
 menu:
   Home: /
   Archives: /archives
-  About: /about
-  Contact: /contact
+  About: /about.html
+  Contact: /contact.html
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: Configurable Title
@@ -14,10 +17,13 @@ index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/
 # Default post title
 default_post_title: Untitled
 
+# Archive Date Format
+archive_date_format: MMM YYYY
+
 # Comments. Choose one by filling up the information
 comments:
   # Disqus comments
-  disqus_shortname:
+  disqus_shortname: klugjo
   # Facebook comments
   facebook:
     appid:
