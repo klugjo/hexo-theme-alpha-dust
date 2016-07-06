@@ -24,6 +24,7 @@ This theme was developed from scratch by myself just for fun. It is a glowy futu
 
 ## External libraries used
 
+- [Bootstrap 4 Alpha](http://v4-alpha.getbootstrap.com/) 
 - [FeatherLight.js](http://noelboss.github.io/featherlight/) (Gallery)
 - [jQuery](https://jquery.com/)
 - [GSAP](http://greensock.com/gsap)
