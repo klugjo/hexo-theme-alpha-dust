@@ -8,33 +8,19 @@ menu:
   About: /about.html
   Contact: /contact.html
 
-# Title on top left of menu. Leave empty to use main blog title
-menu_title: Configurable Title
-
-# URL of the Home page image
-index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg
-
 # Default post title
 default_post_title: Untitled
 
 # Archive Date Format
 archive_date_format: MMM YYYY
 
-# Comments. Choose one by filling up the information
+# Comments.
 comments:
   # Disqus comments
-  disqus_shortname: klugjo
-  # Facebook comments
-  facebook:
-    appid:
-    comment_count: 5
-    comment_colorscheme: light
+  disqus_shortname:
 
 # Google Analytics Tracking ID
 google_analytics:
-
-# Addthis ID
-addthis:
 
 # Social Accounts
 twitter_url: https://twitter.com/?lang=en
