@@ -10,7 +10,6 @@
         <div class="post-info">
             <span class="date"><%= item.date.format(config.date_format) %></span>
             <a href="#disqus_thread" class="comments"><%= __('comment') %></a>
-            <% console.log(item.categories) %>
             <% if(item.categories && item.categories.first()) { %>
                 <span class="category">
                     <a href="<%- config.root + item.categories.first().path  %>"><%- item.categories.first().name %></a>

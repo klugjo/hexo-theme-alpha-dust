@@ -12,7 +12,6 @@
             <% if (theme.comments && theme.comments.disqus_shortname){ %>
                 <a href="<%- item.permalink %>#disqus_thread" class="comments article-comment-link"><%= __('comment') %></a>
             <% } %>
-            <% console.log(item.categories) %>
             <% if(item.categories.first()) { %>
                 <span class="category">
                     <a href="<%- config.root + item.categories.first().path  %>"><%- item.categories.first().name %></a>
