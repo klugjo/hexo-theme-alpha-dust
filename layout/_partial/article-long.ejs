@@ -8,7 +8,9 @@
             </a>
         </h1>
         <div class="post-info">
-            <span class="date"><%= item.date.format(config.date_format) %></span>
+            <% if(item.date) { %>
+                <span class="date"><%= item.date.format(config.date_format) %></span>
+            <% } %>
             <a href="#disqus_thread" class="comments"><%= __('comment') %></a>
             <% if(item.categories && item.categories.first()) { %>
                 <span class="category">
