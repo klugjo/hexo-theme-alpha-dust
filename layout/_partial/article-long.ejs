@@ -11,7 +11,9 @@
             <% if(item.date) { %>
                 <span class="date"><%= item.date.format(config.date_format) %></span>
             <% } %>
-            <a href="#disqus_thread" class="comments"><%= __('comment') %></a>
+            <% if (theme.comments && theme.comments.disqus_shortname) { %>
+                <a href="#disqus_thread" class="comments"><%= __('comment') %></a>
+            <% } %>
             <% if(item.categories && item.categories.first()) { %>
                 <span class="category">
                     <a href="<%- config.root + item.categories.first().path  %>"><%- item.categories.first().name %></a>
