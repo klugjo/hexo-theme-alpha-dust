@@ -2,10 +2,21 @@
     <div class="col-sm-12">
 
         <!--Title and Logo-->
-        <%- partial('_partial/header.ejs', {logoIcon: '', headerTitle: ''}) %>
-
-        <section class="main">
-            <%- partial('_partial/article-long', {item: page}) %>
-        </section>
+        <%- partial('_partial/header.ejs', {logoIcon: 'fa fa-tags', headerTitle: page.title}) %>
+        <% if (page.type === 'tags' || page.type === 'tag') { %>
+            <%
+                var tags = [];
+                site.tags.forEach(function(tag) {
+                    tags.push('<a class="tag" href="' + config.root + tag.path + '">#' + tag.name + '</a>');
+                }); 
+            %>
+            <section class="main tags-container">
+                <%- tags.join(' ') %>
+            </section>
+        <% } else { %>
+            <section class="main">
+                <%- partial('_partial/article-long', {item: page}) %>
+            </section>
+        <% } %>
     </div>
 </div>

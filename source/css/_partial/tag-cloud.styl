@@ -1,0 +1,35 @@
+.tags-container
+    margin-top: 150px
+    text-align: center
+    @media $xs
+        margin-top 50px
+    .tag 
+        background: $mainColor1
+        border-radius: 5px 22px 22px 5px
+        color: black
+        display: inline-block
+        height: 40px
+        line-height: 40px
+        padding: 0 30px 0 34px
+        position: relative
+        margin: 40px
+        text-decoration: none
+        -webkit-transition: color 0.2s
+        box-shadow: $titleTextShadow
+        transition: box-shadow 0.3s ease
+        @media $xs
+            margin: 15px
+        &:before
+            background: black
+            border-radius: 10px
+            box-shadow: none
+            content: ''
+            height: 10px
+            left: 15px
+            position: absolute
+            width: 10px
+            top: 15px
+            box-shadow: $titleTextShadow
+        &:hover
+            box-shadow: none    
+        
