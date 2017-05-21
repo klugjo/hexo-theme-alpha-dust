@@ -154,6 +154,62 @@ email_url: \#
 rss_url: \#
 ```
 
+## Tags page.
+
+> Follow these steps to add a `tags` page that contains all the tags in your site.
+
+- Create a page named `tags`
+
+```
+$ hexo new page "tags"
+```
+
+- Edit the newly created page and set page type to `tags` in the front matter.
+
+```
+title: All tags
+type: "tags"
+```
+
+- Add `tags` to the menu in the theme `_config.yml`:
+
+```
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about.html
+  Tags: /tags
+```
+
+## Categories page.
+
+> Follow these steps to add a `categories` page that contains all the categories in your site.
+
+- Create a page named `categories`
+
+```
+$ hexo new page "categories"
+```
+
+- Edit the newly created page and set page type to `categories` in the front matter.
+
+```
+title: All tags
+type: "categories"
+```
+
+- Add `tags` to the menu in the theme `_config.yml`:
+
+```
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  About: /about.html
+  Categories: /categories
+```
+
 ## Creator
 
 This theme was created by Jonathan Klughertz, check out my [github](https://github.com/klugjo) and [blog](http://www.codeblocq.com/) for more info.
