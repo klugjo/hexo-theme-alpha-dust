@@ -4,14 +4,16 @@
         <!--Title and Logo-->
         <%- partial('_partial/header.ejs', {logoIcon: 'fa fa-tags', headerTitle: page.title}) %>
         <% if (page.type === 'tags' || page.type === 'tag') { %>
-            <%
-                var tags = [];
-                site.tags.forEach(function(tag) {
-                    tags.push('<a class="tag" href="' + config.root + tag.path + '">#' + tag.name + '</a>');
-                }); 
-            %>
-            <section class="main tags-container">
-                <%- tags.join(' ') %>
+            <section class="main archive-container">
+                <% site.tags.forEach(function(tag) { %>
+                        <%- partial('_partial/tag-cat-item', {item: {path: tag.path, title: '#' + tag.name}}) %>
+                <% }); %>
+            </section>
+        <% } else if (page.type === 'categories' || page.type === 'category') { %>
+            <section class="main archive-container">
+                <% site.categories.forEach(function(cat) { %>
+                        <%- partial('_partial/tag-cat-item', {item: {path: cat.path, title: cat.name}}) %>
+                <% }); %>
             </section>
         <% } else { %>
             <section class="main">
