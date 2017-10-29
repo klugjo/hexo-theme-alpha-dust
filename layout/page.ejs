@@ -2,20 +2,22 @@
     <div class="col-sm-12">
 
         <!--Title and Logo-->
-        <%- partial('_partial/header.ejs', {logoIcon: 'fa fa-tags', headerTitle: page.title}) %>
         <% if (page.type === 'tags' || page.type === 'tag') { %>
+            <%- partial('_partial/header.ejs', {logoIcon: 'fa fa-tags', headerTitle: page.title}) %>
             <section class="main archive-container">
                 <% site.tags.forEach(function(tag) { %>
                         <%- partial('_partial/tag-cat-item', {item: {path: tag.path, title: '#' + tag.name}}) %>
                 <% }); %>
             </section>
         <% } else if (page.type === 'categories' || page.type === 'category') { %>
+            <%- partial('_partial/header.ejs', {logoIcon: 'fa fa-folder-open', headerTitle: page.title}) %>
             <section class="main archive-container">
                 <% site.categories.forEach(function(cat) { %>
                         <%- partial('_partial/tag-cat-item', {item: {path: cat.path, title: cat.name}}) %>
                 <% }); %>
             </section>
         <% } else { %>
+            <%- partial('_partial/header.ejs', {logoIcon: '', headerTitle: ''}) %>
             <section class="main">
                 <%- partial('_partial/article-long', {item: page}) %>
             </section>
