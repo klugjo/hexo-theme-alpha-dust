@@ -2,7 +2,7 @@
     <div class="col-sm-12">
 
         <!--Title and Logo-->
-        <%- partial('_partial/header.ejs', {logoIcon: '', headerTitle: ''}) %>
+        <%- partial('_partial/header.ejs', {logoIcon: page.logoIcon, headerTitle: ''}) %>
 
         <section class="main">
             <%- partial('_partial/article-long', {item: page}) %>
