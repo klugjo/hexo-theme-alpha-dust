@@ -80,6 +80,15 @@ The value should be a valid [Font Awesome class](http://fontawesome.io/icons/)
 fa_logo: fa-cube
 ```
 
+Page's and post's logo is configured in front matter and overrides blog's logo if defined.
+
+```
+---
+title: Post's title
+logoIcon: fa-pencil-square
+---
+```
+
 ### Footer About Section Text
 
 The About section's text in the footer is configured in the theme's `_config.yml`. HTML allowed.
