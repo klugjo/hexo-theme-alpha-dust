@@ -51,9 +51,16 @@
         <meta property="og:image" content="<%= config.url %><%= config.cover %>"/>
     <% } %>
 
-    <meta name="twitter:card" content="summary" />
+    <% if(page.twitter_large_card) { %>
+        <meta name="twitter:card" content="summary_large_image" />
+    <% } else { %>
+        <meta name="twitter:card" content="summary" />
+    <% } %>
     <% if(theme.twitter_handle) { %>
         <meta name="twitter:site" content="<%= theme.twitter_handle %>>" />
+    <% } %>
+    <% if(page.twitter_image) { %>
+        <meta name="twitter:image" content="<%= page.twitter_image %>" />
     <% } %>
 
     <!-- Title -->
