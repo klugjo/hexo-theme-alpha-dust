@@ -1,5 +1,12 @@
 # Alpha Dust Hexo Blog Theme
 
+forked 200821
+#### removed google plus link
+#### add telegram link
+(updated font-awesome 4.7.0)
+config.yml modified
+---
+
 ![](http://www.codeblocq.com/img/hexo-theme-thumbnail/AlphaDust.jpg)
 
 [Check out the demo](http://www.codeblocq.com/assets/projects/hexo-theme-alpha-dust/).
